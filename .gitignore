@@ -1,3 +1,6 @@
+target/
+*.txt
+*Attendence*
 # Compiled class file
 *.class
 
