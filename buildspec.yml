@@ -10,3 +10,4 @@ phases:
 artifacts: 
   files: 
     - target/LiquorShop.war
+    - CloudFormationCreateEC2.yml
