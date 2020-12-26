@@ -7,3 +7,6 @@ foreach($keyPair in $keyPairs.KeyPairs){
         $keyName = $keyPair.KeyName
     }
 }
+
+$systemInfo = aws ec2 run-instances --image $amiID --key-name $keyName --instance-type "t2.micro"
+
