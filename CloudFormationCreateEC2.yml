@@ -5,3 +5,12 @@ Parameters:
   KeyName: 
     Description: Provide key pair that you would like to add to your EC2 to access it later
     Type: AWS::EC2::KeyPair::KeyName
+
+Resources: 
+  EC2Server: 
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: ami-006493a8f627b96f9
+      InstanceType: t2.micro
+      KeyName: 
+        Ref: KeyName
