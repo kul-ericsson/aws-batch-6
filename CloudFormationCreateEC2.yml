@@ -1,0 +1,7 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: This is our first template to create EC2 Server using CloudFormation
+
+Parameters: 
+  KeyName: 
+    Description: Provide key pair that you would like to add to your EC2 to access it later
+    Type: AWS::EC2::KeyPair::KeyName
