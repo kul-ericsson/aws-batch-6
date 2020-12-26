@@ -7,3 +7,6 @@ phases:
   build: 
     commands: 
       - mvn clean package
+artifacts: 
+  files: 
+    - target/LiquorShop.war
