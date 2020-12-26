@@ -5,7 +5,11 @@ Parameters:
   KeyName: 
     Description: Provide key pair that you would like to add to your EC2 to access it later
     Type: AWS::EC2::KeyPair::KeyName
-
+  Source: 
+    Description: Source IP Range for SSH
+    Type: String
+    MinLength: 9
+    MaxLength: 18
 Resources: 
   EC2Server: 
     Type: AWS::EC2::Instance
@@ -14,3 +18,14 @@ Resources:
       InstanceType: t2.micro
       KeyName: 
         Ref: KeyName
+      SecurityGroups: 
+        - Ref: SecurityGroup
+  SecurityGroup: 
+    Type: AWS::EC2::SecurityGroup
+    Properties: 
+      GroupDescription: Open for SSH
+      SecurityGroupIngress: 
+      - CidrIp: !Ref Source
+        FromPort: 22
+        ToPort: 22
+        IpProtocol: tcp
