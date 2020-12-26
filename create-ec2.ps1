@@ -12,3 +12,8 @@ $systemInfo = aws ec2 run-instances --image $amiID --key-name $keyName --instanc
 sleep 60
 $instanceID = ($systemInfo | ConvertFrom-Json).Instances.InstanceId
 aws ec2 describe-instances --filters Name="instance-id",Values="$instanceID"
+
+Write-Host "[INFO] Run your deployment"
+Write-Host "[INFO] Trigger your Test Suite"
+
+aws ec2 terminate-instances --instance-ids $instanceID
