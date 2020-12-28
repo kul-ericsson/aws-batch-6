@@ -33,3 +33,7 @@ Ensrue that port 8080-8082 are open nin AWS Security Group attached to your EC2 
 - `sudo chmod 755 kubectl`
 - `sudo cp kubectl /usr/bin/`
 - `kubectl version`
+
+### Add kubernetes context
+- `aws eks update-kubeconfig --name thinknyx-kul --region us-east-2`
+- `kubectl get pods -A`
