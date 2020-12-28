@@ -7,6 +7,7 @@ phases:
   build: 
     commands: 
       - mvn clean package
+      - docker image build -t thinknyx:app-b6 -d Dockerfile .
 artifacts: 
   files: 
     - target/LiquorShop.war
