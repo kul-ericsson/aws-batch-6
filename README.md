@@ -9,3 +9,9 @@
 - `sudo apt-get install docker-ce docker-ce-cli containerd.io -y`
 - `sudo chown ubuntu:users /var/run/docker.sock`
 - `docker version`
+
+## Sample Docker Images with Container run commands
+# Ensrue that port 8080-8081 are open nin AWS Security Group attached to your EC2 Server
+- `docker container run -d -p 8080:8080  kulbhushanmayer/tomcat:8.5.61`
+- `docker container run -d -p 8081:8080  kulbhushanmayer/tomcat:8.5.58`
+- `docker container run -d -p 8082:8080  kulbhushanmayer/tomcat:9.0.38`
