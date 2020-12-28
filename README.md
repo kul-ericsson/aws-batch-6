@@ -21,3 +21,15 @@ Ensrue that port 8080-8082 are open nin AWS Security Group attached to your EC2 
 - `docker container ps` # List all the running containers
 - `docker container ps -a` # List all container irrespective of their state
 - `docker image ls` # List all images currently available on the system
+
+## Configure Kubernetes Client to Interact with EKS
+
+### Install AWSCLI
+- `sudo apt-get update -y`
+- `sudo apt-get install awscli -y`
+
+### Install & Confgure kubectl
+- `curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/kubectl`
+- `sudo chmod 755 kubectl`
+- `sudo cp kubectl /usr/bin/`
+- `kubectl version`
