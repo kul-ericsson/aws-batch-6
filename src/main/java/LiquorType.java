@@ -1,5 +1,5 @@
 package com.sample.model;
 
 public enum LiquorType {
-    WINE,BEER,WHISKY,RUM
+    WINE,BEER,WHISKY,RUM,COCKTAILS
 }

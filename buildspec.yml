@@ -12,11 +12,11 @@ phases:
   build: 
     commands: 
       - mvn clean package
-      - docker image build -t thinknyx:app-b6 -f Dockerfile .
+      - docker image build -t thinknyx:app-b6-2 -f Dockerfile .
   post_build: 
     commands: 
-      - docker tag thinknyx:app-b6 554660509057.dkr.ecr.us-east-2.amazonaws.com/thinknyx:eb6
-      - docker push 554660509057.dkr.ecr.us-east-2.amazonaws.com/thinknyx:eb6
+      - docker tag thinknyx:app-b6-2 554660509057.dkr.ecr.us-east-2.amazonaws.com/thinknyx:eb6-2
+      - docker push 554660509057.dkr.ecr.us-east-2.amazonaws.com/thinknyx:eb6-2
 artifacts: 
   files: 
     - target/LiquorShop.war
