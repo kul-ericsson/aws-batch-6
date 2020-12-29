@@ -20,3 +20,11 @@ resource "aws_route_table" "thinknyx_rt_with_ngw" {
     gateway_id = aws_nat_gateway.thinknyx_ngw.id
   }
 }
+resource "aws_route_table_association" "thinknyx_rt_ngw_association" {
+  subnet_id = aws_subnet.thinknyx_subnet_2.id
+  route_table_id = aws_route_table.thinknyx_rt_with_ngw.id
+}
+resource "aws_route_table_association" "thinknyx_rt_ngw_association" {
+  subnet_id = aws_subnet.thinknyx_subnet_3.id
+  route_table_id = aws_route_table.thinknyx_rt_with_ngw.id
+}
