@@ -4,3 +4,7 @@ data "aws_vpc" "vpc" {
     values = [var.Name]
   }
 }
+data "aws_subnet" "public" {
+  vpc_id = data.aws_vpc.vpc.id
+  availability_zone = "us-east-2a"
+}
