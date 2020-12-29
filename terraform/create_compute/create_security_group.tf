@@ -12,6 +12,13 @@ resource "aws_security_group" "thinknyx_sg" {
     from_port = 22
     to_port = 22
   }
+  ingress {
+    cidr_blocks = [ "0.0.0.0/0"]
+    description = "MYSQL Port"
+    protocol = "tcp"
+    from_port = 3306
+    to_port = 3306
+  }
   egress {
     cidr_blocks = [ "0.0.0.0/0"]
     description = "All Open"
