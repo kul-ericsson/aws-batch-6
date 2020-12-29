@@ -37,3 +37,12 @@ Ensrue that port 8080-8082 are open nin AWS Security Group attached to your EC2 
 ### Add kubernetes context
 - `aws eks update-kubeconfig --name thinknyx-kul --region us-east-2`
 - `kubectl get pods -A`
+
+
+## Terraform
+
+### Download Terraform from below link depending upon your OS: 
+`https://www.terraform.io/downloads.html`
+
+### Commands
+- `terraform --version` # to check current version
