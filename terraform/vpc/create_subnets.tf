@@ -3,8 +3,9 @@ resource "aws_subnet" "thinknyx_subnet_1" {
   cidr_block = "10.10.10.0/24"
   availability_zone = "us-east-2a"
   tags = {
-    "Name" = var.Name
+    "Name" = "${var.Name}_public_subnet"
   }
+  map_public_ip_on_launch = true
 }
 resource "aws_subnet" "thinknyx_subnet_2" {
   vpc_id = aws_vpc.thinknyx_vpc.id
