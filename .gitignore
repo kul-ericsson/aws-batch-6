@@ -1,6 +1,12 @@
 target/
 *.txt
 *Attendence*
+
+# Files to ignore for Terraform work
+**/*lock*
+**/*state*
+**/.terraform
+
 # Compiled class file
 *.class
 
