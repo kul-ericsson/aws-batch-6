@@ -46,3 +46,8 @@ Ensrue that port 8080-8082 are open nin AWS Security Group attached to your EC2 
 
 ### Commands
 - `terraform --version` # to check current version
+- `terraform init` # to initiate project & download providers plugins 
+- `terraform validate` # to check syntax and any missing attributes
+- `terraform plan` # for Dry Run
+- `terraform apply` # to apply the changes on AWS platform
+- `terraform apply -auto-approve`
