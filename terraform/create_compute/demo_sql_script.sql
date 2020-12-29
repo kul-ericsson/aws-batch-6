@@ -1,0 +1,3 @@
+CREATE TABLE employees (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, lastname VARCHAR(20), firstname VARCHAR(20), phone VARCHAR(20),  dateofbirth DATE);
+INSERT INTO employees (id, lastname, firstname, phone, dateofbirth) VALUES (NULL, 'Smith', 'John', '(555)555-5555', '1980-01-31');
+INSERT INTO employees (id, lastname, firstname, phone, dateofbirth) VALUES (NULL, 'Mayer', 'Kulbhushan', '9717996125', '1986-10-10');
