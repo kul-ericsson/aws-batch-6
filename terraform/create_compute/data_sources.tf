@@ -15,3 +15,7 @@ data "aws_subnet_ids" "private" {
     values = [var.Name]
   }
 }
+data "aws_security_group" "vpc_default_sg" {
+  vpc_id = data.aws_vpc.vpc.id
+  name = "default"
+}
