@@ -53,3 +53,4 @@ Ensrue that port 8080-8082 are open nin AWS Security Group attached to your EC2 
 - `terraform apply -auto-approve`
 - `terraform.exe apply -auto-approve -var suffix=kul` #to replace variable values on runtime
 - `terraform.exe output` # print outputs declare in the terraform project
+- `terraform.exe destroy -auto-approve` # delete all the resources that we have created in the project
