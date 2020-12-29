@@ -12,3 +12,16 @@ resource "null_resource" "install_mysql_client" {
     ]
   }
 }
+
+resource "null_resource" "copy_demo_sql_script" {
+  provisioner "file" {
+    connection {
+      type = "ssh"
+      user = "ubuntu"
+      private_key = file("C:/training/ericsson/aws/kul-ericsson-thinknyx.pem")
+      host = aws_instance.server_public.public_ip
+    }
+    source = "demo_sql_script.sql"
+    destination = "/tmp/demo_sql_script.sql"
+  }
+}
