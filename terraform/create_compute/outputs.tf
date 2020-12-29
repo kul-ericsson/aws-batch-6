@@ -6,5 +6,5 @@ output "mysql_address"{
 }
 output private_server_ips {
   description = "IDs of EC2 instances"
-  value       = { for p in (data.aws_subnet_ids.private.ids) : p => aws_instance.server_private[p].private_ip }
+  value = { for p in (data.aws_subnet_ids.private.ids) : p => aws_instance.server_private[p].private_ip }
 }
